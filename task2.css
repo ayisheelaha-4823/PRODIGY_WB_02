@@ -1,0 +1,124 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif; /* futuristic digital font */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.4), 0 0 80px rgba(0,255,255,0.2);
+  width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.outer-circle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  background: radial-gradient(circle at center, #0f2027, #203a43);
+  box-shadow: 0 0 20px #00ffff, inset 0 0 15px rgba(0,255,255,0.2);
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 15px #00ffff, inset 0 0 10px rgba(0,255,255,0.2);}
+  100% { box-shadow: 0 0 40px #00ffff, inset 0 0 20px rgba(0,255,255,0.4);}
+}
+
+.inner-circle {
+  text-align: center;
+}
+
+.text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff, 0 0 20px #00ffff;
+  letter-spacing: 2px;
+}
+
+.button-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button-wrapper button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(0,255,255,0.2);
+  color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.button-wrapper button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  transform: translateY(-3px);
+}
+
+.laps {
+  list-style: none;
+  margin-top: 30px;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  text-align: left;
+  border-top: 1px solid rgba(0,255,255,0.3);
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  background: rgba(0,255,255,0.05);
+  border-radius: 8px;
+  color: #00ffff;
+  text-shadow: 0 0 4px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.lap-item:hover {
+  background: rgba(0,255,255,0.2);
+  transform: translateX(5px);
+}
+
+.number {
+  font-weight: 600;
+}
+
+.time-stamp {
+  font-weight: 700;
+}
